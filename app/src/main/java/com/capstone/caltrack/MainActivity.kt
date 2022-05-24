@@ -13,11 +13,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navView = binding.bottomNavigationView
+//        val navView = binding.bottomNavigationView
 
-        navView.menu.getItem(1).isEnabled = false
+//        navView.menu.getItem(1).isEnabled = false
 
-        supportFragmentManager.beginTransaction().replace(R.id.framecontainer, MainFragment()).commit()
+//        supportFragmentManager.beginTransaction().replace(R.id.framecontainer, MainFragment()).commit()
 
 //        navView.setOnItemSelectedListener(NavigationBarView.OnItemSelectedListener { item ->
 //            var temp: Fragment? = null
