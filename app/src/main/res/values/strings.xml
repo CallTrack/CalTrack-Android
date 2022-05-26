@@ -33,4 +33,10 @@
     <string name="input_food_drink">Input food/drink name</string>
     <string name="calories">Calories</string>
     <string name="input_calorie_value">Input calorie value</string>
+    <string name="login">Login</string>
+    <string name="login_welcome">Please sign in to continue</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="new_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
 </resources>
