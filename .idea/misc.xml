@@ -23,6 +23,8 @@
         <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack Capstone/app/src/main/res/drawable/btn_login.xml" value="0.1055" />
         <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack Capstone/app/src/main/res/drawable/edit_text.xml" value="0.1055" />
         <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack Capstone/app/src/main/res/drawable/ic_add_circle.xml" value="0.1055" />
+        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack Capstone/app/src/main/res/drawable/ic_baseline_bar_chart_24.xml" value="0.1055" />
+        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack Capstone/app/src/main/res/drawable/ic_baseline_calendar_24.xml" value="0.1055" />
         <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack Capstone/app/src/main/res/drawable/ic_baseline_mail_24.xml" value="0.1055" />
         <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack Capstone/app/src/main/res/drawable/ic_baseline_mail_outline_24.xml" value="0.1055" />
         <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack Capstone/app/src/main/res/drawable/input_text.xml" value="0.1055" />
@@ -35,6 +37,7 @@
         <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack Capstone/app/src/main/res/layout/fragment_login.xml" value="0.18" />
         <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack Capstone/app/src/main/res/layout/fragment_main.xml" value="0.18469431380932022" />
         <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack Capstone/app/src/main/res/layout/fragment_profile.xml" value="0.18469431380932022" />
+        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack Capstone/app/src/main/res/layout/fragment_register.xml" value="0.18" />
         <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack Capstone/app/src/main/res/layout/item_exercise.xml" value="0.18469431380932022" />
       </map>
     </option>

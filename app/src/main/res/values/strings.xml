@@ -39,4 +39,14 @@
     <string name="password">Password</string>
     <string name="new_account">Don\'t have an account?</string>
     <string name="sign_up">Sign up</string>
+    <string name="create_account">Create Account</string>
+    <string name="input_fill">Please fill the input below here</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="name">Name</string>
+    <string name="gender">Gender</string>
+    <string name="cm_kg">CM / KG</string>
+    <string name="activity_level">Activity Level</string>
+    <string name="signup">Sign Up</string>
+    <string name="logging_in">Logging in....</string>
+    <string name="registering">Registering....</string>
 </resources>

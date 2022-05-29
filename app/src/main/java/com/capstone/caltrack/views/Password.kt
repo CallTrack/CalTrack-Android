@@ -10,7 +10,7 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import com.capstone.caltrack.R
 
-open class Password : EditText, View.OnTouchListener{
+class Password : EditText, View.OnTouchListener {
     constructor(context: Context) : super(context) {
         init()
     }
@@ -27,17 +27,22 @@ open class Password : EditText, View.OnTouchListener{
         init()
     }
 
-    private lateinit var showPasswordButtonImage: Drawable
+    private lateinit var showPassword: Drawable
+    private lateinit var icLock: Drawable
 
     private fun init() {
-        showPasswordButtonImage = ContextCompat.getDrawable(
+        showPassword = ContextCompat.getDrawable(
             context, R.drawable.ic_baseline_eye_24
         ) as Drawable
 
+        icLock = ContextCompat.getDrawable(
+            context, R.drawable.ic_baseline_lock_24
+        ) as Drawable
+
         setCompoundDrawablesWithIntrinsicBounds(
+            icLock,
             null,
-            null,
-            showPasswordButtonImage,
+            showPassword,
             null
         )
 
@@ -48,14 +53,14 @@ open class Password : EditText, View.OnTouchListener{
         var isButtonTouched = false
 
         if (layoutDirection == View.LAYOUT_DIRECTION_RTL) {
-            val buttonEnd = (showPasswordButtonImage.intrinsicWidth + paddingStart)
+            val buttonEnd = (showPassword.intrinsicWidth + paddingStart)
                 .toFloat()
 
             if (event.x < buttonEnd) {
                 isButtonTouched = true
             }
         } else {
-            val buttonStart = (width - paddingEnd - showPasswordButtonImage.intrinsicWidth)
+            val buttonStart = (width - paddingEnd - showPassword.intrinsicWidth)
                 .toFloat()
 
             if (event.x > buttonStart) {
