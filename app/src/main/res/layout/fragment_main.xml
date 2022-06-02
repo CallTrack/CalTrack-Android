@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainFragment">
+    tools:context=".ui.MainFragment">
 
     <TextView
-        android:id="@+id/total_cal"
+        android:id="@+id/tv_cal_total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="27sp"
@@ -24,7 +24,7 @@
         android:background="@drawable/rectangle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/total_cal">
+        app:layout_constraintTop_toBottomOf="@+id/tv_cal_total">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,12 +44,15 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/ic_restaurant"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="22dp"
-                        android:src="@drawable/ic_restaurant" />
+                        android:src="@drawable/ic_restaurant"
+                        android:contentDescription="@string/meal_icon"/>
 
                     <TextView
+                        android:id="@+id/tv_cal_eat_val"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="13dp"
@@ -70,12 +73,15 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:id="@+id/ic_burn"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="22dp"
-                        android:src="@drawable/ic_burn" />
+                        android:src="@drawable/ic_burn"
+                        android:contentDescription="@string/burn_icon"/>
 
                     <TextView
+                        android:id="@+id/tv_cal_burn_val"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="13dp"

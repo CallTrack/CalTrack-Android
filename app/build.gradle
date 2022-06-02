@@ -1,6 +1,9 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -14,6 +17,7 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "URL_BASE", '"35.219.30.144/api/"')
     }
 
     buildTypes {
@@ -46,13 +50,30 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
-    // Material Design
-    implementation 'com.google.android.material:material:1.7.0-alpha01'
+    //coroutine
+    implementation 'androidx.annotation:annotation:1.3.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1"
 
-    // Graphic
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.9.0"
+
+    //room
+    implementation "androidx.room:room-runtime:2.4.2"
+    implementation "androidx.room:room-ktx:2.4.2"
+    kapt "androidx.room:room-compiler:2.4.2"
+
+    // Material Design
+    implementation 'com.google.android.material:material:1.7.0-alpha02'
+
+    // Graph
     implementation 'com.github.AAChartModel:AAChartCore-Kotlin:-SNAPSHOT'
 
     // Navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation "androidx.fragment:fragment-ktx:1.4.1"
 }

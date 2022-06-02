@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CalTrack">
         <activity
-            android:name=".Exercise"
+            android:name=".ui.ExerciseActivity"
             android:exported="false" />
         <activity
-            android:name=".FoodActivity"
+            android:name=".ui.FoodActivity"
             android:exported="false" />
         <activity
-            android:name=".AddCalorie"
+            android:name=".ui.AddCalorieActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

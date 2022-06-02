@@ -7,13 +7,18 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.capstone.caltrack.MainFragment"
+        android:name="com.capstone.caltrack.ui.MainFragment"
         android:label="@string/home"
         tools:layout="@layout/fragment_main" />
 
     <fragment
+        android:id="@+id/navigation_blank"
+        android:label=""
+        android:enabled="false"/>
+
+    <fragment
         android:id="@+id/navigation_profile"
-        android:name="com.capstone.caltrack.ProfileFragment"
+        android:name="com.capstone.caltrack.ui.ProfileFragment"
         android:label="@string/profile"
         tools:layout="@layout/fragment_profile" />
 

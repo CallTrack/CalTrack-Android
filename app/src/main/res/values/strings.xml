@@ -33,6 +33,10 @@
     <string name="input_food_drink">Input food/drink name</string>
     <string name="calories">Calories</string>
     <string name="input_calorie_value">Input calorie value</string>
+    <string name="tab_text_2">Custom Meal</string>
+    <string name="tab_text_1">Search Meal</string>
+    <string name="meal_icon">meal_icon</string>
+    <string name="burn_icon">burn_icon</string>
     <string name="login">Login</string>
     <string name="login_welcome">Please sign in to continue</string>
     <string name="email">Email</string>
