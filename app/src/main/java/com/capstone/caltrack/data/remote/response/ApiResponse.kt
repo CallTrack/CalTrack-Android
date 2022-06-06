@@ -32,10 +32,10 @@ data class User(
      var age: Int?,
 
      @field:SerializedName("weight")
-     var weight: Int?,
+     var weight: Float?,
 
      @field:SerializedName("height")
-     var height: Int?,
+     var height: Float?,
 
      @field:SerializedName("activity_level")
      var activityLevel: String?,
@@ -59,7 +59,7 @@ data class Records(
      val caloriesIn: Int,
 
      @field:SerializedName("calories_burn")
-     val caloriesBrun: Int,
+     val caloriesBurn: Int,
 
      @field:SerializedName("total_calories")
      val totalCalories: Int

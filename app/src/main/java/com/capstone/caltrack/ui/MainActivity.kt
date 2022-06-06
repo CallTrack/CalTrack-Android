@@ -1,5 +1,7 @@
 package com.capstone.caltrack.ui
 
+
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -7,17 +9,22 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.capstone.caltrack.R
+import com.capstone.caltrack.SessionManager
 import com.capstone.caltrack.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var mainViewModel: MainViewModel
     private lateinit var binding: ActivityMainBinding
+    private lateinit var sessionManager: SessionManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        sessionManager = SessionManager(this)
 
         val navView: BottomNavigationView = binding.navView
 
@@ -30,5 +37,16 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        setUpUser()
+    }
+
+    private fun setUpUser() {
+        val userId = sessionManager.getID()
+
+        if (userId == null) {
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
     }
 }

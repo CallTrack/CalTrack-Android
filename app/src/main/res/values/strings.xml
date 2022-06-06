@@ -53,4 +53,11 @@
     <string name="signup">Sign Up</string>
     <string name="logging_in">Logging in....</string>
     <string name="registering">Registering....</string>
+    <string name="input_email">Insert Email</string>
+    <string name="input_password">Insert password</string>
+    <string name="drink_icon">drink_icon</string>
+    <string name="add_icon">add_icon</string>
+    <string name="remove_icon">remove_icon</string>
+    <string name="login_failed">Login failed</string>
+    <string name="register_fail">Register failed</string>
 </resources>
