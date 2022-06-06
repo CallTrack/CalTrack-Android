@@ -1,4 +1,4 @@
-package com.capstone.caltrack.ui
+package com.capstone.caltrack.ui.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.capstone.caltrack.databinding.FragmentMainBinding
+import com.capstone.caltrack.ui.ExerciseActivity
+import com.capstone.caltrack.ui.food.FoodActivity
 import com.capstone.caltrack.ui.adapter.DrinkAdapter
 
 class MainFragment : Fragment() {

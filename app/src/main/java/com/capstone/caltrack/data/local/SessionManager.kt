@@ -1,7 +1,8 @@
-package com.capstone.caltrack
+package com.capstone.caltrack.data.local
 
 import android.content.Context
-import android.content.SharedPreferences
+import com.capstone.caltrack.R
+import com.capstone.caltrack.User
 
 class SessionManager (context: Context) {
     companion object{

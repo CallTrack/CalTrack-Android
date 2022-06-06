@@ -1,4 +1,4 @@
-package com.capstone.caltrack.ui
+package com.capstone.caltrack.ui.main
 
 
 import android.content.Intent
@@ -9,8 +9,9 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.capstone.caltrack.R
-import com.capstone.caltrack.SessionManager
+import com.capstone.caltrack.data.local.SessionManager
 import com.capstone.caltrack.databinding.ActivityMainBinding
+import com.capstone.caltrack.ui.login.LoginActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {

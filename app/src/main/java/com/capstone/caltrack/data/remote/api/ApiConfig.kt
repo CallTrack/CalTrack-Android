@@ -1,5 +1,6 @@
-package com.capstone.caltrack
+package com.capstone.caltrack.data.remote.api
 
+import com.capstone.caltrack.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

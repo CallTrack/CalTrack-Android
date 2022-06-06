@@ -1,4 +1,4 @@
-package com.capstone.caltrack.ui
+package com.capstone.caltrack.ui.food
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

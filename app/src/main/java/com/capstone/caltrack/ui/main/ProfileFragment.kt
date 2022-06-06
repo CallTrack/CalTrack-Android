@@ -1,4 +1,4 @@
-package com.capstone.caltrack.ui
+package com.capstone.caltrack.ui.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

@@ -1,6 +1,8 @@
-package com.capstone.caltrack
+package com.capstone.caltrack.data.remote.api
 
-import retrofit2.Call
+import com.capstone.caltrack.ApiResponse
+import com.capstone.caltrack.Records
+import com.capstone.caltrack.User
 import retrofit2.http.*
 import java.util.*
 
