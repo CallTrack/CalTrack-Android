@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.caltrack.R
@@ -27,6 +28,7 @@ class RegisterActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         setUpViewModel()
+        dropdownItem()
         setUpAction()
     }
 
@@ -35,13 +37,23 @@ class RegisterActivity : AppCompatActivity() {
         registerViewModel = ViewModelProvider(this, factory).get(RegisterViewModel::class.java)
     }
 
+    private fun dropdownItem(){
+        val gender = resources.getStringArray(R.array.Gender)
+        val arrayGender = ArrayAdapter(this, R.layout.dropdown_item, gender)
+        binding.etGender.setAdapter(arrayGender)
+
+        val activity = resources.getStringArray(R.array.Activity)
+        val arrayActivity = ArrayAdapter(this, R.layout.dropdown_item, activity)
+        binding.etActivity.setAdapter(arrayActivity)
+    }
+
     private fun setUpAction() {
         binding.btnLogin.setOnClickListener {
 
             val email = binding.etEmail.text.toString()
             val name = binding.etName.text.toString()
             val password = binding.etPassword.text.toString()
-            val age = binding.etDate.text.toString()
+            val age = binding.etAge.text.toString()
             val gender = binding.etGender.text.toString()
             val height = binding.etHeight.text.toString()
             val weight = binding.etWeight.text.toString()
@@ -51,13 +63,13 @@ class RegisterActivity : AppCompatActivity() {
                     binding.etEmail.error = "Insert Email"
                 }
                 name.isEmpty() -> {
-                    binding.etEmail.error = "Inser Name"
+                    binding.etEmail.error = "Insert Name"
                 }
                 password.isEmpty() -> {
                     binding.etPassword.error = "Insert Password"
                 }
                 age.isEmpty() -> {
-                    binding.etDate.error = "Insert Age"
+                    binding.etAge.error = "Insert Age"
                 }
                 gender.isEmpty() -> {
                     binding.etGender.error = "Insert Gender"

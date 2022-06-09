@@ -1,210 +1,238 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.register.RegisterActivity">
 
-    <TextView
-        android:id="@+id/tv_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/create_account"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.127"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_input"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/input_fill"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.135"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_account" />
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/et_email"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="30dp"
-        android:hint="@string/email"
-        android:minHeight="60dp"
-        android:drawablePadding="10dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:background="@drawable/edit_text"
-        android:drawableStart="@drawable/ic_baseline_mail_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_input" />
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_account"
+            style="@style/title_bar"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="30dp"
+            android:text="@string/create_account"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/et_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="@string/name"
-        android:minHeight="60dp"
-        android:drawablePadding="10dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:background="@drawable/edit_text"
-        android:drawableStart="@drawable/ic_baseline_person_24"
-        app:layout_constraintEnd_toEndOf="@+id/et_email"
-        app:layout_constraintStart_toStartOf="@+id/et_email"
-        app:layout_constraintTop_toBottomOf="@+id/et_email" />
+        <TextView
+            android:id="@+id/tv_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:text="@string/input_fill"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_account" />
 
-    <com.capstone.caltrack.views.Password
-        android:id="@+id/et_password"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="@string/password"
-        android:minHeight="60dp"
-        android:drawablePadding="10dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:background="@drawable/edit_text"
-        android:drawableStart="@drawable/ic_baseline_lock_24"
-        app:layout_constraintEnd_toEndOf="@+id/et_name"
-        app:layout_constraintStart_toStartOf="@+id/et_name"
-        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ti_layout"
+            android:id="@+id/ti_email"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="30dp"
+            android:hint="@string/email"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_input">
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/et_date"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="@string/date_of_birth"
-        android:minHeight="60dp"
-        android:inputType="date"
-        android:drawablePadding="10dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:background="@drawable/edit_text"
-        android:drawableStart="@drawable/ic_baseline_calendar_24"
-        app:layout_constraintEnd_toEndOf="@+id/et_password"
-        app:layout_constraintStart_toStartOf="@+id/et_password"
-        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/et_layout"
+                android:id="@+id/et_email"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@drawable/ic_baseline_mail_24"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.capstone.caltrack.views.EditText
-        android:id="@+id/et_gender"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="@string/gender"
-        android:minHeight="60dp"
-        android:drawablePadding="10dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:background="@drawable/edit_text"
-        android:drawableStart="@drawable/ic_baseline_calendar_24"
-        app:layout_constraintEnd_toEndOf="@+id/et_date"
-        app:layout_constraintStart_toStartOf="@+id/et_date"
-        app:layout_constraintTop_toBottomOf="@+id/et_date" />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ti_layout"
+            android:id="@+id/ti_name"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:hint="@string/name"
+            app:layout_constraintEnd_toEndOf="@+id/ti_email"
+            app:layout_constraintStart_toStartOf="@+id/ti_email"
+            app:layout_constraintTop_toBottomOf="@+id/ti_email" >
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/et_height"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/edit_text"
-        android:drawablePadding="10dp"
-        android:hint="@string/height"
-        android:inputType="number"
-        android:minHeight="60dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:textAlignment="center"
-        app:layout_constraintStart_toStartOf="@+id/et_gender"
-        app:layout_constraintTop_toBottomOf="@+id/et_gender" />
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/et_layout"
+                android:id="@+id/et_name"
+                android:inputType="textPersonName"
+                android:drawableStart="@drawable/ic_baseline_person_24"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/tv_cm_kg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/cm_kg"
-        android:textAlignment="center"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/et_height"
-        app:layout_constraintEnd_toStartOf="@+id/et_weight"
-        app:layout_constraintStart_toEndOf="@+id/et_height"
-        app:layout_constraintTop_toTopOf="@+id/et_weight" />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ti_layout"
+            android:id="@+id/ti_password"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:hint="@string/password"
+            app:endIconMode="password_toggle"
+            app:layout_constraintEnd_toEndOf="@+id/ti_name"
+            app:layout_constraintStart_toStartOf="@+id/ti_name"
+            app:layout_constraintTop_toBottomOf="@+id/ti_name">
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/et_weight"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/edit_text"
-        android:drawablePadding="10dp"
-        android:hint="@string/weight"
-        android:inputType="number"
-        android:minHeight="60dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/et_gender"
-        app:layout_constraintTop_toBottomOf="@+id/et_gender" />
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/et_layout"
+                android:id="@+id/et_password"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/ic_baseline_lock_24"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/et_activity"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="@string/activity_level"
-        android:minHeight="60dp"
-        android:drawablePadding="10dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:background="@drawable/edit_text"
-        android:drawableStart="@drawable/ic_baseline_bar_chart_24"
-        app:layout_constraintEnd_toEndOf="@+id/et_date"
-        app:layout_constraintStart_toStartOf="@+id/et_date"
-        app:layout_constraintTop_toBottomOf="@+id/et_height" />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ti_layout"
+            android:id="@+id/ti_age"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:hint="@string/age"
+            app:layout_constraintEnd_toEndOf="@+id/ti_password"
+            app:layout_constraintStart_toStartOf="@+id/ti_password"
+            app:layout_constraintTop_toBottomOf="@+id/ti_password" >
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/btn_custom"
-        android:padding="12dp"
-        android:text="@string/signup"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/et_activity"
-        app:layout_constraintStart_toStartOf="@+id/et_activity"
-        app:layout_constraintTop_toBottomOf="@+id/et_activity" />
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/et_layout"
+                android:id="@+id/et_age"
+                android:inputType="date"
+                android:drawableStart="@drawable/ic_baseline_calendar_24"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <ProgressBar
-        android:id="@+id/pb_loading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ti_layout_do"
+            android:id="@+id/ti_gender"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:hint="@string/gender"
+            app:layout_constraintEnd_toEndOf="@+id/ti_age"
+            app:layout_constraintStart_toStartOf="@+id/ti_age"
+            app:layout_constraintTop_toBottomOf="@+id/ti_age" >
 
-    <TextView
-        android:id="@+id/loading_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/registering"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pb_loading" />
+            <AutoCompleteTextView
+                style="@style/et_layout"
+                android:id="@+id/et_gender"
+                android:layout_weight="1"
+                android:inputType="none"
+                android:drawableStart="@drawable/ic_baseline_calendar_24"
+                />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ti_height"
+            android:layout_marginTop="10dp"
+            android:minHeight="60dp"
+            android:hint="@string/height"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintStart_toStartOf="@+id/ti_gender"
+            app:layout_constraintTop_toBottomOf="@+id/ti_gender">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:id="@+id/et_height"
+                android:textAlignment="center"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_cm_kg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cm_kg"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:fontFamily="@font/blinker_semibold"
+            app:layout_constraintBottom_toBottomOf="@+id/ti_height"
+            app:layout_constraintEnd_toStartOf="@+id/ti_weight"
+            app:layout_constraintStart_toEndOf="@+id/ti_height"
+            app:layout_constraintTop_toTopOf="@+id/ti_weight" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ti_weight"
+            android:layout_marginTop="10dp"
+            android:minHeight="60dp"
+            android:hint="@string/weight"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/ti_gender"
+            app:layout_constraintTop_toBottomOf="@+id/ti_gender">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:id="@+id/et_weight"
+                android:textAlignment="center"
+                android:inputType="number"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/ti_layout_do"
+            android:id="@+id/ti_activity"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:hint="@string/activity"
+            app:layout_constraintEnd_toEndOf="@+id/ti_age"
+            app:layout_constraintStart_toStartOf="@+id/ti_age"
+            app:layout_constraintTop_toBottomOf="@+id/ti_height">
+
+            <AutoCompleteTextView
+                style="@style/et_layout"
+                android:id="@+id/et_activity"
+                android:layout_weight="1"
+                android:inputType="none"
+                android:drawableStart="@drawable/ic_baseline_calendar_24"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            style="@style/btn"
+            android:background="@drawable/btn_custom"
+            android:padding="12dp"
+            android:text="@string/signup"
+            android:textSize="24sp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ti_activity" />
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/loading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/registering"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pb_loading" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

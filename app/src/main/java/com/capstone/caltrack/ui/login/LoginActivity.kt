@@ -31,12 +31,12 @@ class LoginActivity : AppCompatActivity() {
         setUpAction()
     }
 
-    fun setUpViewModel() {
+    private fun setUpViewModel() {
         val factory: ViewModelFactory = ViewModelFactory.getInstance(this)
         loginViewModel = ViewModelProvider(this, factory).get(LoginViewModel::class.java)
     }
 
-    fun setUpAction() {
+    private fun setUpAction() {
         binding.goToRegister.setOnClickListener {
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)

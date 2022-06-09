@@ -60,4 +60,18 @@
     <string name="remove_icon">remove_icon</string>
     <string name="login_failed">Login failed</string>
     <string name="register_fail">Register failed</string>
+    <string name="age">Age</string>
+    <string name="dropdown_item">Dropdown Item</string>
+
+    <string-array name="Gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="Activity">
+        <item>Sedentary</item>
+        <item>Light</item>
+        <item>Moderate</item>
+        <item>Active</item>
+        <item>Very</item>
+    </string-array>
 </resources>
