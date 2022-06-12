@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CalTrack</string>
+    <string name="app_name">CallTrack Testing</string>
     <string name="home">Home</string>
     <string name="profile">Profile</string>
     <string name="calorie_val">%1$d Cal</string>
@@ -7,7 +7,7 @@
     <string name="weight_val">%1$d Kg</string>
     <string name="height">Height</string>
     <string name="height_val">%1$d Cm</string>
-    <string name="serving_val">%1$d %2$s</string>
+    <string name="serving_val">%1$d Pan</string>
     <string name="favorite">Favorite</string>
     <string name="food">Food</string>
     <string name="exercise">Exercise</string>
@@ -61,7 +61,19 @@
     <string name="login_failed">Login failed</string>
     <string name="register_fail">Register failed</string>
     <string name="age">Age</string>
+    <string name="move_activity">Move Activity</string>
     <string name="dropdown_item">Dropdown Item</string>
+    <string name="btn_back">Button Back</string>
+    <string name="btn_galery">Button Galery</string>
+    <string name="btn_shutter">Button Shutter Camera</string>
+    <string name="btn_switch">Button Switch Camera</string>
+    <string name="camera_fail">Opening camera failed</string>
+    <string name="picture_fail">Take picture failed</string>
+    <string name="choose_picture">Choose a picture</string>
+    <string name="calories_serving">Calories / Serving</string>
+    <string name="serving">Serving</string>
+    <string name="total_calories">Total Calories</string>
+    <string name="snacks">Snacks</string>
 
     <string-array name="Gender">
         <item>Male</item>

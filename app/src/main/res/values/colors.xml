@@ -12,4 +12,5 @@
     <color name="nickel">#969695</color>
     <color name="gray">#E6E6E6</color>
     <color name="yellow">#FFC700</color>
+    <color name="camera_container">#4F12C4C8</color>
 </resources>
