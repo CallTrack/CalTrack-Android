@@ -9,7 +9,7 @@
         android:id="@+id/rv_ic_drink"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:src="@drawable/ic_baseline_local_drink_24"
+        tools:src="@drawable/ic_baseline_local_drink_30"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:contentDescription="@string/drink_icon" />

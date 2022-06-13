@@ -9,11 +9,17 @@ class FoodEntity (
 
         @field:ColumnInfo(name = "idFood")
         @field:PrimaryKey
-        val idFood: String,
+        val idFood: Int,
 
         @field:ColumnInfo(name = "name")
         val name: String,
 
         @field:ColumnInfo(name = "calories")
-        val calories: Int
+        val calories: Int,
+
+        @field:ColumnInfo(name = "selected")
+        var selected: Boolean,
+
+        @field:ColumnInfo(name = "time")
+        val time: String?
 )

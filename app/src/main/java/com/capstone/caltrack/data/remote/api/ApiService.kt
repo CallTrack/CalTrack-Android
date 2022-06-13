@@ -1,23 +1,12 @@
 package com.capstone.caltrack.data.remote.api
 
-import com.capstone.caltrack.ApiResponse
-import com.capstone.caltrack.Records
-import com.capstone.caltrack.User
+import com.capstone.caltrack.data.remote.response.ApiResponse
+import com.capstone.caltrack.data.remote.response.Records
+import com.capstone.caltrack.data.remote.response.User
 import retrofit2.http.*
 import java.util.*
 
 interface ApiService {
-//    @FormUrlEncoded
-//    @POST("users")
-//    suspend fun register(
-//        @Field("email") email: String,
-//        @Field("name") name: String,
-//        @Field("gender") gender: String,
-//        @Field("age") age: Int,
-//        @Field("weight") weight: Float,
-//        @Field("height") height: Float,
-//        @Field("activityLevel") activityLevel: String
-//    ): ApiResponse
 
     @FormUrlEncoded
     @POST("users")
@@ -30,12 +19,6 @@ interface ApiService {
         @Field("height") height: Float,
         @Field("activityLevel") activityLevel: String
     ): ApiResponse
-
-//    @FormUrlEncoded
-//    @GET("users/{email}")
-//    suspend fun login(
-//        @Path("email") email: String
-//    ): User
 
     @GET("users/{email}")
     suspend fun login(
@@ -56,8 +39,8 @@ interface ApiService {
     @FormUrlEncoded
     @POST("records/{userId}")
     suspend fun addRecord(
-        @Path("userId") userId: String,
-        @Field("date") date: Date,
+        @Path("userId") userId: String?,
+        @Field("date") date: String,
         @Field("caloriesIn") caloriesIn: Int,
         @Field("caloriesBurn") caloriesBurn: Int,
         @Field("totalCalories") totalCalories: Int
@@ -65,7 +48,17 @@ interface ApiService {
 
     @GET("records/{userId}")
     suspend fun getRecord(
-        @Path("userId") userId: String
-    ): Records
+        @Path("userId") userId: String?
+    ): ApiResponse
 
+    @GET("foods")
+    suspend fun getFood(): ApiResponse
+
+    @GET("foods/search/{name}")
+    suspend fun searchFood(
+        @Path("name") name: String
+    ): ApiResponse
+
+    @GET("exercises")
+    suspend fun getExercises(): ApiResponse
 }

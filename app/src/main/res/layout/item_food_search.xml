@@ -2,12 +2,13 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_food_search"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="8dp">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/check"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_check_24"
@@ -26,23 +27,12 @@
         tools:text="Nasi Putih" />
 
     <TextView
-        android:id="@+id/tv_search_serving"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_search_food"
-        tools:text="@string/serving_val" />
-
-    <TextView
         android:id="@+id/tv_search_cal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:textSize="15sp"
-        app:layout_constraintStart_toEndOf="@+id/tv_search_serving"
-        app:layout_constraintTop_toTopOf="@+id/tv_search_serving"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_search_food"
         tools:text="@string/calorie_val" />
 
     <FrameLayout

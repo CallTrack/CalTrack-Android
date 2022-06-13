@@ -13,6 +13,8 @@ import com.capstone.caltrack.ui.ViewModelFactory
 import com.capstone.caltrack.ui.main.MainActivity
 import com.capstone.caltrack.ui.register.RegisterActivity
 import com.google.firebase.auth.FirebaseAuth
+import java.text.SimpleDateFormat
+import java.util.*
 
 class LoginActivity : AppCompatActivity() {
 
@@ -26,6 +28,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         auth = FirebaseAuth.getInstance()
+
+        supportActionBar?.hide()
 
         setUpViewModel()
         setUpAction()
@@ -55,13 +59,16 @@ class LoginActivity : AppCompatActivity() {
                     auth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener {
                             if (it.isSuccessful) {
-
                                 loginViewModel.login(email).observe(this){ result ->
                                     if (result != null) {
                                         when (result) {
                                             is Result.Loading-> binding.pbLoading.visibility = View.VISIBLE
                                             is Result.Success -> {
                                                 binding.pbLoading.visibility = View.GONE
+                                                val calendar = Calendar.getInstance()
+                                                val simpleDateFormat = SimpleDateFormat("yyyy-MM-dd")
+                                                val currentDate = simpleDateFormat.format(calendar.time).toString()
+                                                loginViewModel.addNewRecord(currentDate)
                                                 val intent = Intent(this, MainActivity::class.java)
                                                 intent.flags =
                                                     Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK

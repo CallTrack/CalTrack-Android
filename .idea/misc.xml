@@ -3,26 +3,48 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable-v24/btn_food.xml" value="0.245" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable-v24/custom_camera_container.xml" value="0.307" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/bg_button.xml" value="0.1" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/bg_button_disable.xml" value="0.1965" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/btn_custom.xml" value="0.1" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/circle.xml" value="0.156" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/edit_text.xml" value="0.1" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_add_32.xml" value="0.24" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_add_circle.xml" value="0.24" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_baseline_bar_chart_24.xml" value="0.1" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_baseline_calendar_24.xml" value="0.24" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_baseline_eye_24.xml" value="0.24" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_baseline_local_drink_24.xml" value="0.24" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.24" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_baseline_mail_24.xml" value="0.24" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.24" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_baseline_star_35.xml" value="0.24" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_baseline_star_outline_24.xml" value="0.1745" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_baseline_timer_24.xml" value="0.24" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_camera.xml" value="0.1335" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_camera_30.xml" value="0.1335" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_camera_32.xml" value="0.1775" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_check_24.xml" value="0.24" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_fastfood.xml" value="0.1" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/ic_run.xml" value="0.1495" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/drawable/rectangle.xml" value="0.1" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/activity_add_calorie.xml" value="0.25" />
-        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/activity_exercise.xml" value="0.33" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/activity_camera.xml" value="0.3009833262077811" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/activity_censor_result.xml" value="0.33" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/activity_exercise.xml" value="0.1178343949044586" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/activity_food.xml" value="0.3009833262077811" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/activity_login.xml" value="0.30055579307396324" />
-        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/activity_register.xml" value="0.23662737987307345" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/activity_setting.xml" value="0.22" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/dropdown_item.xml" value="0.3009833262077811" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/fragment_blank.xml" value="0.1" />
-        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/fragment_food_custom.xml" value="0.33" />
-        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/fragment_food_search.xml" value="0.33" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/fragment_food_custom.xml" value="0.25" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/fragment_food_search.xml" value="0.25" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/fragment_login.xml" value="0.19809610154125112" />
-        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/fragment_main.xml" value="0.33" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/fragment_main.xml" value="0.25" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/fragment_register.xml" value="0.33" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/item_drink.xml" value="0.33" />
@@ -30,44 +52,7 @@
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/item_food.xml" value="0.3009833262077811" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/layout/item_food_search.xml" value="0.33" />
         <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18802083333333333" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/drawable-v24/btn_food.xml" value="0.1" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/activity_add_calorie.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/activity_camera.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/activity_censor_result.xml" value="0.2109375" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/activity_exercise.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/activity_food.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/activity_login.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/activity_main.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/activity_register.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/dropdown_item.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/fragment_food_custom.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/fragment_food_search.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/fragment_main.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/fragment_profile.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/item_drink.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/item_exercise.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/item_food.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/CalTrack-Android/app/src/main/res/layout/item_food_search.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/drawable/btn_custom.xml" value="0.1" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/font/font.xml" value="0.1675925925925926" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/activity_add_calorie.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/activity_exercise.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/activity_food.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/activity_main.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/activity_register.xml" value="0.25" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/dropdown_item.xml" value="0.22083333333333333" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/fragment_food_custom.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/fragment_food_search.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/fragment_login.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/fragment_main.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/fragment_profile.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/fragment_register.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/item_drink.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/item_exercise.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/item_food.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/layout/item_food_search.xml" value="0.225" />
-        <entry key="..\:/Users/Umam/Documents/Bangkit 2022/Android Studio/Capstone CallTrack/app/src/main/res/menu/bottom_nav_menu.xml" value="0.225" />
+        <entry key="..\:/Code/AndroidStudioProject/ProjectDicoding/CalTrack/app/src/main/res/menu/option_bar_menu.xml" value="0.29717180244829045" />
       </map>
     </option>
   </component>

@@ -1,25 +1,31 @@
 package com.capstone.caltrack.ui.register
 
-import androidx.lifecycle.ViewModel
+import android.util.Log
+import androidx.lifecycle.*
 import com.capstone.caltrack.data.Repository
+import com.capstone.caltrack.data.Result
+import com.capstone.caltrack.data.remote.response.ApiResponse
+import kotlinx.coroutines.launch
 
 class RegisterViewModel(private val repository: Repository): ViewModel() {
 
-//    val _result = MutableLiveData<Result<ApiResponse>>()
-//    val result: LiveData<Result<ApiResponse>>
-//        get() = _result
-//
-//    fun register(email: String, name: String, gender: String, age: Int, weight: Float, height: Float, activityLevel: String) {
-//        _result.postValue(Result.Loading(true))
-//        try {
-//            val response = repository.register(email, name, gender, age, weight, height, activityLevel)
-//            _result.postValue(Result.Success(response))
-//        } catch (e: Exception) {
-//            _result.postValue(Result.Error(e))
-//        } finally {
-//            _result.postValue(Result.Loading(false))
-//        }
-//    }
+    private val _result = MutableLiveData<Result<ApiResponse>>()
+    val result: LiveData<Result<ApiResponse>> = _result
 
-    fun register(email: String, name: String, gender: String, age: Int, weight: Float, height: Float, activityLevel: String) = repository.register(email, name, gender, age, weight, height, activityLevel)
+    fun register(email: String, name: String, gender: String, age: Int, weight: Float, height: Float, activityLevel: String) {
+        viewModelScope.launch {
+            _result.value = Result.Loading
+            try {
+                val response = repository.register(email, name, gender, age, weight, height, activityLevel)
+                _result.value = Result.Success(response)
+            } catch (e: Exception) {
+                Log.d(TAG, "register: ${e.message.toString()}")
+                _result.value = Result.Error(e.message.toString())
+            }
+        }
+    }
+
+    companion object {
+        const val TAG = "RegisterViewModel"
+    }
 }

@@ -218,7 +218,7 @@
         android:id="@+id/ic_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_timer_24"
+        android:src="@drawable/ic_baseline_timer_30"
         app:layout_constraintEnd_toEndOf="@+id/line1"
         app:layout_constraintStart_toStartOf="@+id/line1"
         app:layout_constraintTop_toTopOf="@+id/ic_burn" />

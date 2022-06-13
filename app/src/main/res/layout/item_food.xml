@@ -7,7 +7,7 @@
     android:paddingTop="4dp">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tv_food_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -16,20 +16,15 @@
         tools:text="Nasi Putih" />
 
     <TextView
+        android:id="@+id/tv_cal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
         android:textSize="20sp"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/tv_food_name"
         tools:text="@string/calorie_val" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:text="@string/serving_val" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

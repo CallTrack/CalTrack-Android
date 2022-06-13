@@ -1,7 +1,8 @@
-package com.capstone.caltrack
+package com.capstone.caltrack.data.remote.response
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
-import java.util.*
+import kotlinx.parcelize.Parcelize
 
 data class ApiResponse(
      @field:SerializedName("status")
@@ -11,7 +12,16 @@ data class ApiResponse(
      val message: String,
 
      @field:SerializedName("data")
-     val data: User
+     val data: User,
+
+     @field:SerializedName("foodList")
+     val foodList: List<Food>,
+
+     @field:SerializedName("exerciseList")
+     val exerciseList: List<Exercise>,
+
+     @field:SerializedName("recordList")
+     val recordList: List<Records>
 )
 
 data class User(
@@ -44,6 +54,19 @@ data class User(
      var dailyCalories: Int?
 )
 
+@Parcelize
+data class Food(
+
+     @field:SerializedName("id_food")
+     val idFood: Int,
+
+     @field:SerializedName("name")
+     val name: String,
+
+     @field:SerializedName("calories_per_serving")
+     val calories: Int
+) : Parcelable
+
 data class Records(
 
      @field:SerializedName("id_record")
@@ -53,7 +76,7 @@ data class Records(
      val idUser: String,
 
      @field:SerializedName("date")
-     val date: Date,
+     val date: String,
 
      @field:SerializedName("calories_in")
      val caloriesIn: Int,
@@ -66,7 +89,13 @@ data class Records(
 )
 
 data class Exercise(
+
+     @field:SerializedName("id_exercise")
+     val id_exercise: Int,
+
+     @field:SerializedName("name")
      val name: String,
-     val map: Boolean,
-     val isFavorite: Boolean = false,
+
+     @field:SerializedName("calories_per_minute")
+     val caloriesPerMinute: Int
 )

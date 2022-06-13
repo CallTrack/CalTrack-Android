@@ -18,7 +18,12 @@ class FoodActivity : AppCompatActivity() {
         binding = ActivityFoodBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.title = "Add Meal"
+
+        val mealTime = intent.getStringExtra(EXTRA_TIME)
+
         val sectionsPagerAdapter = SectionsPagerAdapter(this)
+        sectionsPagerAdapter.mealTime = mealTime!!
         val viewPager: ViewPager2 = findViewById(R.id.view_pager)
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = binding.tabs
@@ -30,6 +35,8 @@ class FoodActivity : AppCompatActivity() {
     }
 
     companion object {
+        const val EXTRA_TIME = "extra_time"
+
         @StringRes
         private val TAB_TITLES = intArrayOf(
             R.string.tab_text_1,

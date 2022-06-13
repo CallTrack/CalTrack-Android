@@ -4,11 +4,15 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.capstone.caltrack.data.local.entity.ExerciseEntity
 import com.capstone.caltrack.data.local.entity.FoodEntity
+import com.capstone.caltrack.data.local.entity.RecordEntity
 
-@Database(entities = [FoodEntity::class], version = 1, exportSchema = false)
+@Database(entities = [FoodEntity::class, ExerciseEntity::class, RecordEntity::class], version = 1, exportSchema = false)
 abstract class AppDatabase: RoomDatabase() {
     abstract fun foodDao(): FoodDao
+    abstract fun exerciseDao(): ExerciseDao
+    abstract fun recordDao(): RecordDao
 
     companion object {
         @Volatile

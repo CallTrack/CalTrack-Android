@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.caltrack.R
 import com.capstone.caltrack.data.Result
@@ -27,9 +28,32 @@ class RegisterActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+        supportActionBar?.hide()
+
         setUpViewModel()
         dropdownItem()
         setUpAction()
+
+        registerViewModel.result.observe(this) { result ->
+            if (result != null) {
+                when (result) {
+                    is Result.Loading -> showLoading(true)
+                    is Result.Success -> {
+                        showLoading(false)
+                        Toast.makeText(this, getString(R.string.reegister_success), Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this, LoginActivity::class.java)
+                        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                        startActivity(intent)
+                        finish()
+                    }
+                    is Result.Error -> {
+                        showLoading(false)
+                        Toast.makeText(this, R.string.register_fail, Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                }
+            }
+        }
     }
 
     private fun setUpViewModel() {
@@ -78,29 +102,17 @@ class RegisterActivity : AppCompatActivity() {
                     auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener {
                             if (it.isSuccessful) {
-                                registerViewModel.register(email, name, gender, age.toInt(), weight.toFloat(), height.toFloat(), activeLevel).observe(this) { result ->
-                                    if (result != null) {
-                                        when (result) {
-                                            is Result.Loading -> binding.pbLoading.visibility = View.VISIBLE
-                                            is Result.Success -> {
-                                                binding.pbLoading.visibility = View.GONE
-                                                Toast.makeText(this, "Register success", Toast.LENGTH_SHORT).show()
-                                                val intent = Intent(this, LoginActivity::class.java)
-                                                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
-                                                startActivity(intent)
-                                                finish()
-                                            }
-                                            is Result.Error -> {
-                                                Toast.makeText(this, R.string.register_fail, Toast.LENGTH_SHORT)
-                                                    .show()
-                                            }
-                                        }
-                                    }
-                                }
+                                registerViewModel.register(email, name, gender, age.toInt(), weight.toFloat(), height.toFloat(), activeLevel)
                             }
                         }
                 }
             }
+        }
+    }
+
+    private fun showLoading(show: Boolean) {
+        binding.apply {
+            pbLoading.isVisible = show
         }
     }
 }

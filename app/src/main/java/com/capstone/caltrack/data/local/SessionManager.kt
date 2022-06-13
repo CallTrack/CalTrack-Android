@@ -2,7 +2,7 @@ package com.capstone.caltrack.data.local
 
 import android.content.Context
 import com.capstone.caltrack.R
-import com.capstone.caltrack.User
+import com.capstone.caltrack.data.remote.response.User
 
 class SessionManager (context: Context) {
     companion object{
@@ -13,8 +13,9 @@ class SessionManager (context: Context) {
         private const val AGE = "age"
         private const val WEIGHT = "weight"
         private const val HEIGHT = "height"
-        private const val ACTIVITYLEVEL = "activitylevel"
-        private const val DAILYCALORIES = "dailycalories"
+        private const val ACTIVITY_LEVEL = "activitylevel"
+        private const val DAILY_CALORIES = "dailycalories"
+        private const val DRINK = "drink"
     }
 
     private val preferences = context.getSharedPreferences(context.getString(R.string.app_name), Context.MODE_PRIVATE)
@@ -29,18 +30,40 @@ class SessionManager (context: Context) {
             putInt(AGE, user?.age!!)
             putFloat(WEIGHT, user.weight!!)
             putFloat(HEIGHT, user.height!!)
-            putString(ACTIVITYLEVEL, user.activityLevel)
-            putInt(DAILYCALORIES, user.dailyCalories!!)
+            putString(ACTIVITY_LEVEL, user.activityLevel)
+            putInt(DAILY_CALORIES, user.dailyCalories!!)
         }
         editor.apply()
+    }
+
+    fun setDrink(qty: Int) {
+        val editor = preferences.edit()
+        editor.putInt(DRINK, qty)
+        editor.apply()
+    }
+
+    fun getDrink(): Int {
+        return preferences.getInt(DRINK, 0)
     }
 
     fun getID(): String? {
         return preferences.getString(IDUSER, null)
     }
 
-    fun getUserd(): List<String> {
-        return preferences.all.map { it.key }
+    fun getWeight(): String {
+        return preferences.getFloat(WEIGHT, 0F).toString()
+    }
+
+    fun getHeight(): String {
+        return preferences.getFloat(HEIGHT, 0F).toString()
+    }
+
+    fun getActive(): String? {
+        return preferences.getString(ACTIVITY_LEVEL, null)
+    }
+
+    fun getDailyCalories(): Int {
+        return preferences.getInt(DAILY_CALORIES, 2000)
     }
 
     fun getUser(): User? {
@@ -51,22 +74,14 @@ class SessionManager (context: Context) {
         user?.gender = preferences.getString(GENDER, null)
         user?.weight = preferences.getFloat(WEIGHT, 0F)
         user?.height = preferences.getFloat(HEIGHT, 0F)
-        user?.activityLevel = preferences.getString(ACTIVITYLEVEL, null)
-        user?.dailyCalories = preferences.getInt(DAILYCALORIES, 0)
-//        preferences.apply {
-//            user?.apply {
-//                idUser = getString(IDUSER, null)
-//                name = getString(NAME, null)
-//                email = getString(EMAIL, null)
-//                gender = getString(GENDER, null)
-//                age = getInt(AGE, 0)
-//                weight = getFloat(WEIGHT, 0F)
-//                height = getFloat(HEIGHT, 0F)
-//                activityLevel = getString(ACTIVITYLEVEL, null)
-//                dailyCalories = getInt(DAILYCALORIES, 0)
-//
-//            }
-//        }
+        user?.activityLevel = preferences.getString(ACTIVITY_LEVEL, null)
+        user?.dailyCalories = preferences.getInt(DAILY_CALORIES, 0)
         return user
+    }
+
+    fun logout(){
+        val editor = preferences.edit()
+        editor.clear()
+        editor.apply()
     }
 }

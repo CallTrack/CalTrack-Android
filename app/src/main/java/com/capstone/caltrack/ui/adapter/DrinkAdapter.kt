@@ -15,7 +15,7 @@ class DrinkAdapter (private val quantity: Int): RecyclerView.Adapter<DrinkAdapte
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        holder.binding.rvIcDrink.setImageResource(R.drawable.ic_baseline_local_drink_24)
+        holder.binding.rvIcDrink.setImageResource(R.drawable.ic_baseline_local_drink_30)
         if (position > quantity-1) {
             holder.binding.rvIcDrink.alpha = 0.5F
         } else holder.binding.rvIcDrink.alpha = 1F

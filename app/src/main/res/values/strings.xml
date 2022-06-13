@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CallTrack Testing</string>
+    <string name="app_name">CalTrack</string>
     <string name="home">Home</string>
     <string name="profile">Profile</string>
     <string name="calorie_val">%1$d Cal</string>
@@ -60,6 +60,10 @@
     <string name="remove_icon">remove_icon</string>
     <string name="login_failed">Login failed</string>
     <string name="register_fail">Register failed</string>
+    <string name="data_fail">Failed to retrieve data</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="change_language">Change Language</string>
+    <string name="reegister_success">Register success</string>
     <string name="age">Age</string>
     <string name="move_activity">Move Activity</string>
     <string name="dropdown_item">Dropdown Item</string>
@@ -74,6 +78,8 @@
     <string name="serving">Serving</string>
     <string name="total_calories">Total Calories</string>
     <string name="snacks">Snacks</string>
+    <string name="no_permission">Permission not granted</string>
+    <string name="please_insert">Please Insert</string>
 
     <string-array name="Gender">
         <item>Male</item>

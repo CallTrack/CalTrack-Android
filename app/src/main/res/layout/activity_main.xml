@@ -7,43 +7,6 @@
     android:clipChildren="false"
     tools:context=".ui.main.MainActivity">
 
-    <!--    <FrameLayout-->
-    <!--        android:id="@+id/framecontainer"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent">-->
-
-    <!--        <androidx.coordinatorlayout.widget.CoordinatorLayout-->
-    <!--            android:id="@+id/coordinator"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="match_parent">-->
-
-    <!--            <com.google.android.material.bottomappbar.BottomAppBar-->
-    <!--                android:id="@+id/bottom_app_bar"-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:layout_gravity="bottom"-->
-    <!--                app:contentInsetEnd="10dp"-->
-    <!--                app:contentInsetStart="10dp">-->
-
-    <!--                <com.google.android.material.bottomnavigation.BottomNavigationView-->
-    <!--                    android:id="@+id/bottom_navigation_view"-->
-    <!--                    android:layout_width="match_parent"-->
-    <!--                    android:layout_height="match_parent"-->
-    <!--                    android:background="@android:color/transparent"-->
-    <!--                    app:elevation="0dp"-->
-    <!--                    app:menu="@menu/bottom_nav_menu" />-->
-
-    <!--            </com.google.android.material.bottomappbar.BottomAppBar>-->
-
-    <!--            <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-    <!--                android:id="@+id/camera"-->
-    <!--                android:layout_width="wrap_content"-->
-    <!--                android:layout_height="wrap_content"-->
-    <!--                android:src="@drawable/ic_camera"-->
-    <!--                app:layout_anchor="@id/bottom_app_bar" />-->
-    <!--        </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
-
-    <!--    </FrameLayout>-->
 
     <fragment
         android:id="@+id/nav_host_fragment_activity_main"
@@ -74,13 +37,14 @@
         app:menu="@menu/bottom_nav_menu" >
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:src="@drawable/ic_camera_32"
+            android:backgroundTint="@color/yellow"
             android:outlineSpotShadowColor="@android:color/transparent"
             android:outlineAmbientShadowColor="@color/black"
-            app:fabSize="normal"
-            android:layout_marginBottom="8dp"
-            android:scaleType="center" />
+            app:fabSize="normal"/>
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>

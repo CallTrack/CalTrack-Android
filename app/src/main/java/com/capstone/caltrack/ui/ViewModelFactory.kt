@@ -5,6 +5,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.capstone.caltrack.di.Injection
 import com.capstone.caltrack.data.Repository
+import com.capstone.caltrack.ui.addcalorie.AddCalorieViewModel
+import com.capstone.caltrack.ui.censorresult.CameraViewModel
+import com.capstone.caltrack.ui.exercise.ExerciseViewModel
+import com.capstone.caltrack.ui.food.FoodViewModel
 import com.capstone.caltrack.ui.login.LoginViewModel
 import com.capstone.caltrack.ui.main.MainViewModel
 import com.capstone.caltrack.ui.register.RegisterViewModel
@@ -23,6 +27,18 @@ class ViewModelFactory private constructor(private val repository: Repository) :
             modelClass.isAssignableFrom(RegisterViewModel::class.java) ->
                 @Suppress("UNCHECKED_CAST")
                 RegisterViewModel(repository) as T
+            modelClass.isAssignableFrom(AddCalorieViewModel::class.java) ->
+                @Suppress("UNCHECKED_CAST")
+                AddCalorieViewModel(repository) as T
+            modelClass.isAssignableFrom(FoodViewModel::class.java) ->
+                @Suppress("UNCHECKED_CAST")
+                FoodViewModel(repository) as T
+            modelClass.isAssignableFrom(ExerciseViewModel::class.java) ->
+                @Suppress("UNCHECKED_CAST")
+                ExerciseViewModel(repository) as T
+            modelClass.isAssignableFrom(CameraViewModel::class.java) ->
+                @Suppress("UNCHECKED_CAST")
+                CameraViewModel(repository) as T
             else -> throw IllegalArgumentException("Unknown ViewModel Class: " + modelClass.name)
         }
     }

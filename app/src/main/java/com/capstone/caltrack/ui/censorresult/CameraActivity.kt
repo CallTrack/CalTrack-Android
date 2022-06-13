@@ -11,17 +11,25 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.camera.core.*
+import androidx.camera.core.CameraSelector
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.ViewModelProvider
+import com.capstone.caltrack.*
 import com.capstone.caltrack.R
-import com.capstone.caltrack.createFile
+import com.capstone.caltrack.data.Result
 import com.capstone.caltrack.databinding.ActivityCameraBinding
-import com.capstone.caltrack.showSnackbar
-import com.capstone.caltrack.uriToFile
+import com.capstone.caltrack.ui.ViewModelFactory
+import com.capstone.caltrack.ui.login.LoginViewModel
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MultipartBody
+import okhttp3.RequestBody.Companion.asRequestBody
+import java.io.File
 
 class CameraActivity : AppCompatActivity() {
 
+    private lateinit var viewModel: CameraViewModel
     private var imageCapture: ImageCapture? = null
     private var cameraSelector: CameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
     private lateinit var openGalleryLauncher: ActivityResultLauncher<Intent>
@@ -33,12 +41,41 @@ class CameraActivity : AppCompatActivity() {
         binding = ActivityCameraBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        supportActionBar?.hide()
+
+        setUpViewModel()
+
         if (!allPermissionsGranted()) {
             ActivityCompat.requestPermissions(
                 this,
                 REQUIRED_PERMISSIONS,
                 REQUEST_CODE_PERMISSIONS
             )
+        }
+
+        viewModel.result.observe(this) { result ->
+            if (result != null) {
+                when (result) {
+                    is Result.Loading -> {
+
+                    }
+                    is Result.Success -> {
+                        val intent = Intent(this@CameraActivity, CensorResultActivity::class.java)
+                        intent.putExtra(CensorResultActivity.EXTRA_PHOTO_RESULT, getFile)
+                        intent.putExtra(
+                            CensorResultActivity.EXTRA_CAMERA_MODE,
+                            cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA
+                        )
+                        intent.putExtra("Result", result.data)
+                        intent.flags = Intent.FLAG_ACTIVITY_FORWARD_RESULT
+                        startActivity(intent)
+                        this@CameraActivity.finish()
+                    }
+                    is Result.Error -> {
+                        Toast.makeText(this, "Failed to upload image", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
         }
 
         initGallery()
@@ -96,15 +133,9 @@ class CameraActivity : AppCompatActivity() {
             if (result.resultCode == RESULT_OK) {
                 val selectedImg: Uri = result.data?.data as Uri
                 val myFile = uriToFile(selectedImg, this@CameraActivity)
-                val intent = Intent(this@CameraActivity, CensorResultActivity::class.java)
-                intent.putExtra(CensorResultActivity.EXTRA_PHOTO_RESULT, myFile)
-                intent.putExtra(
-                    CensorResultActivity.EXTRA_CAMERA_MODE,
-                    cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA
-                )
-                intent.flags = Intent.FLAG_ACTIVITY_FORWARD_RESULT
-                startActivity(intent)
-                this@CameraActivity.finish()
+                getFile = myFile
+
+                uploadImage()
             }
         }
     }
@@ -130,18 +161,32 @@ class CameraActivity : AppCompatActivity() {
                 }
 
                 override fun onImageSaved(output: ImageCapture.OutputFileResults) {
-                    val intent = Intent(this@CameraActivity, CensorResultActivity::class.java)
-                    intent.putExtra(CensorResultActivity.EXTRA_PHOTO_RESULT, photoFile)
-                    intent.putExtra(
-                        CensorResultActivity.EXTRA_CAMERA_MODE,
-                        cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA
-                    )
-                    intent.flags = Intent.FLAG_ACTIVITY_FORWARD_RESULT
-                    startActivity(intent)
-                    this@CameraActivity.finish()
+                    getFile = photoFile
+                    uploadImage()
                 }
             }
         )
+    }
+
+    private var getFile: File? = null
+    private fun uploadImage() {
+        if (getFile != null) {
+            val file = reduceFileImage(getFile as File)
+
+            val requestImageFile = file.asRequestBody("image/jpg".toMediaTypeOrNull())
+            val imageMultiPart: MultipartBody.Part = MultipartBody.Part.createFormData(
+                "img",
+                file.name,
+                requestImageFile
+            )
+
+            viewModel.predictImage(imageMultiPart)
+        }
+    }
+
+    private fun setUpViewModel() {
+        val factory: ViewModelFactory = ViewModelFactory.getInstance(this)
+        viewModel = ViewModelProvider(this, factory).get(CameraViewModel::class.java)
     }
 
     override fun onRequestPermissionsResult(
@@ -154,7 +199,7 @@ class CameraActivity : AppCompatActivity() {
             if (!allPermissionsGranted()) {
                 Toast.makeText(
                     this,
-                    "Tidak mendapatkan permission.",
+                    getString(R.string.no_permission),
                     Toast.LENGTH_SHORT
                 ).show()
                 finish()
@@ -170,5 +215,4 @@ class CameraActivity : AppCompatActivity() {
         private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA)
         private const val REQUEST_CODE_PERMISSIONS = 10
     }
-
 }
