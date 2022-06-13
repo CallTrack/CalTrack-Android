@@ -15,7 +15,7 @@ This repository cover our CalTrack android mobile app as Capstone team C22-PS137
 
 ## Let us introduce our self, CalTrack
 
-CalTrack, shorts for Calorie Tracker, just as it's name, our application help provide user to monitor daily calorie intake. You choose your meal using food recognition using machine learning, or using search feature. We hope that people able to live a healthy life using our application to provide their daily calorie.
+CalTrack, shorts for Calorie Tracker, just as it's name, our application help user to monitor daily calorie intake. You can choose your meal using food recognition using machine learning, or using search feature. We hope that people able to live a healthy life using our application to provide their daily calorie.
 
 ## Libraries
 
