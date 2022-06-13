@@ -20,21 +20,21 @@ CalTrack, shorts for Calorie Tracker, just as it's name, our application help pr
 ## Libraries
 
 In this project we use several libraries both from android and external libraries, such as:
--**Retorofit2** used for access our API routes
--**Coroutine** to do background proccess
--**Room** storing local database
--**CameraX** to access camera to provide food image recognition
--**AAChartModel** to make a graph for our record
+-**Retorofit2** used for access our API routes\
+-**Coroutine** to do background proccess\
+-**Room** storing local database\
+-**CameraX** to access camera to provide food image recognition\
+-**AAChartModel** to make a graph for our record\
 
 ## Features
--**Tracking your daily calories**
+-**Tracking your daily calories**\
 -**Food recognition using camera**
 
 ## Tech Stack
--**Kotlin**
--**Kotlin Coroutine**
--**Retrofit2**
--**Room**
--**Material Design**
--**Model - View - ViewModel (MVVM) Architecture**
+-**Kotlin**\
+-**Kotlin Coroutine**\
+-**Retrofit2**\
+-**Room**\
+-**Material Design**\
+-**Model - View - ViewModel (MVVM) Architecture**\
 -**Jetpack Navigation**
